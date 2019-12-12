@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="kanban">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <!--Archivo Js y Angular.min-->
+    <script src="js/lib/angular.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.min.js"></script>
+
+    <script src="js/app.js"></script>
+
+
+    
+    <!--CSS, Bootstrap, AnimateCss-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!--Google Fonts-->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+</head>
+<body>
+
+   
+        <div layout="row">
+                <div flex="100" class="bar"><img src="https://i.ibb.co/SfZwB5H/Yaydoo-logo.png" alt="Yaydoo-logo" border="0"></div>
+            </div>
+    
+            <div class="contenedor_principal"> 
+    
+                <div class="contenedor_hijo1">
+                   <div class="header">
+                        <span class="font">Presupuesto 1</span>
+                        <span class="font">$10,000.00</span>
+                   </div>
+                    
+                   <div ng-controller="ControladorPrincipal" class="otro">
+                        <canvas id="base" class="chart-horizontal-bar" chart-data="data" chart-labels="labels" width="400" height="50" style="margin: 3% 0%;">
+                        </canvas> 
+                   </div>
+
+                   <div class="footer">
+                        <span class="font">Available: $5,000.00</span>
+                        <span class="font">Committed: $1,000.00</span>
+                        <span class="font"><a href="parciales/kanban.html">Spend $1,000.00</a></span>
+                   </div>
+                </div>
+    
+            
+    
+                <div class="contenedor_hijo2">
+                    <div class="header">
+                        <span class="font">Presupuesto 2</span>
+                        <span class="font">$10,000.00</span>
+                    </div>
+                            
+                    <div ng-controller="ControladorPrincipal">
+                        <canvas id="base" class="chart-horizontal-bar" chart-data="data" chart-labels="labels" width="400" height="50" style="margin: 3% 0%;">
+                        </canvas> 
+                    </div> 
+            
+                    <div class="footer">
+                        <span class="font">Available: $5,000.00</span>
+                        <span class="font">Committed: $1,000.00</span>
+                        <span class="font"><a href="#">Spend $1,000.00</a></span>
+                    </div>
+                </div>
+            </div> 
+
+</body>
+</html>
